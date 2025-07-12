@@ -1,6 +1,7 @@
  const sectionElementBook = document.getElementById('books');
  
 function showBooksUI(bookList) {
+    sectionElementBook.innerHTML = ''
     bookList.forEach(book => {
         const isAvailable = book.quantidade > 0 ? "livro__imagens" : "livro__imagens indisponivel";
 
