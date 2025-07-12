@@ -62,13 +62,13 @@ body {
   border-bottom: 2px solid var(--text-description-color);
 }
 
-.livros {
+.books {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.livro {
+.book {
   width: 302px;
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@ body {
   opacity: 0.3;
 }
 
-.livro__titulo {
+.book__title {
   color: var(--text-title-color);
   font-weight: 700;
   font-size: 18px;
@@ -89,14 +89,14 @@ body {
   line-height: 24px;
 }
 
-.livro__descricao {
+.book__description {
   text-align: center;
   font-size: 18px;
   color: var(--text-author-color);
   margin: 1rem 0;
 }
 
-.livro__preco {
+.book__price {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
