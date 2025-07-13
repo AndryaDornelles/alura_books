@@ -6,7 +6,13 @@ function getFilter() {
     const category = btnElement.value;
     let filterBooks = category == 'disponivel' ? filterAvailability() : filterCategory(category);
     showBooksUI(filterBooks);
-    category == 'disponivel' ? showTotalValue() : '';
+
+    if (category == 'disponivel') {
+        const totalCost = sumCostAvailableBooks(filterBooks);
+        console.log(totalCost);
+        
+        showTotalValue(totalCost);
+    }
 }
 
 function filterCategory(category) {
@@ -17,10 +23,10 @@ function filterAvailability() {
     return books.filter(book => book.quantidade > 0);
 }
 
-function showTotalValue() {
+function showTotalValue(totalCost) {
     totalValueBooks.innerHTML = `
          <div class="livros__disponiveis">
-            <p>Todos os livros disponíveis por R$ <span id="valor">299,00</span></p>
+            <p>Todos os livros disponíveis por R$ <span id="valor">${totalCost}</span></p>
         </div>
     `;
 }
